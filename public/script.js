@@ -1,9 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("testButton").addEventListener("click", async () => {
-        const serverUrl = document.getElementById("serverUrl").value;
-        const resultDiv = document.getElementById("result");
-        
-        resultDiv.innerHTML = ""; 
+    const testButton = document.getElementById("testButton");
+    const resetButton = document.getElementById("resetButton");
+    const serverUrlInput = document.getElementById("serverUrl"); 
+    const resultDiv = document.getElementById("result");        
+
+    testButton.addEventListener("click", async () => {
+        const serverUrl = serverUrlInput.value;
+        resultDiv.innerHTML = "";
 
         try {
             const response = await fetch("api/test-mcp", {
@@ -21,9 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 throw new Error(errorMessage || "Unknown error occurred");
             }
 
-            
             const data = result.data;
-
             const configSchema = data.connections?.[0]?.configSchema;
             const deploymentUrl = data.connections?.[0]?.deploymentUrl;
 
@@ -44,15 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
         } catch (error) {
             resultDiv.innerHTML = `<strong style="color:red;">❌ Failed:</strong> ${error.message}`;
         }
-
-
-    
-
     });
-    const resetButton = document.getElementById("resetButton");
+
+   
     resetButton.addEventListener("click", () => {
         serverUrlInput.value = "";
         resultDiv.innerHTML = "";
     });
-
 });
