@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Server Tester</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        
+        <div class="container">
+            <h1>MCP Server Tester</h1>
+            <input type="text" id="serverUrl" placeholder="Enter MCP Server URL" />
+            <button id="testButton">Test Server</button>
+            <p id="result"></p>
+        </div>
+    
+       
+        <div class="usage-container">
+            <div class="usage-guide">
+                <h2>📘 How to Use</h2>
+                <p>This tool helps you verify if an MCP server is working correctly. Follow these steps:</p>
+                <ol>
+                    <li>Enter the MCP server URL in the input box above.</li>
+                    <li>Click the <strong>"Test Server"</strong> button.</li>
+                    <li>Wait for the results.</li>
+                    <li>✅ If the server is valid, you’ll see a success message with details.</li>
+                    <li>❌ If there's an error, you'll see a failure message.</li>
+                </ol>
+                <h3>🔗 Example URLs:</h3>
+                <ul>
+                    <li><a href="https://registry.smithery.ai/servers/@smithery-ai/brave-search" class="example-url">Example MCP Server</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const exampleUrl = document.querySelector(".example-url");
+            const inputBox = document.querySelector("#serverUrl");
+        
+            if (exampleUrl && inputBox) {
+                exampleUrl.addEventListener("click", function (event) {
+                    event.preventDefault(); 
+                    inputBox.value = this.getAttribute("href"); 
+                });
+            }
+        });
+        </script>
+    
+</body>
+</html>

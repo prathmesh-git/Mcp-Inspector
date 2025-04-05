@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F4F6F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Wrapper to Hold Everything */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Main Container */
+.container {
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 15px; /* Reduce gap between elements */
+}
+
+/* Input Box */
+input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Button */
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Result Display */
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Success Message */
+.success {
+    background-color: #EAF7EE;
+    color: #27AE60;
+    font-weight: bold;
+    border-left: 4px solid #27AE60;
+    padding-left: 10px;
+}
+
+/* Error Message */
+.error {
+    background-color: #FCE4E4;
+    color: #E74C3C;
+    font-weight: bold;
+    border-left: 4px solid #E74C3C;
+    padding-left: 10px;
+}
+
+/* Links */
+a {
+    color: #1A73E8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* How to Use Box */
+.usage-container {
+    width: 100%;
+    max-width: 600px; /* Matches the main container */
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    text-align: left;
+    margin-top: -5px; /* Slightly reduce space */
+}
+
+/* Improve Headings & Text */
+.usage-guide h2 {
+    color: #222831;
+    font-size: 22px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Icon for How to Use */
+.usage-guide h2::before {
+    content: "🔹";
+    margin-right: 8px;
+}
+
+/* Improve List Styling */
+.usage-guide ol {
+    padding-left: 18px;
+}
+
+.usage-guide li {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+/* Example URLs Section */
+.usage-guide h3 {
+    margin-top: 15px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.usage-guide h3::before {
+    content: "🔗";
+    margin-right: 6px;
+}
