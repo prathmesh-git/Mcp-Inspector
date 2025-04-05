@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         resultDiv.innerHTML = ""; 
 
         try {
-            const response = await fetch("api/test-mcp", {
+            const response = await fetch("api/server", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ serverUrl })
