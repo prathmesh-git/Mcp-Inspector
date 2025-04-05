@@ -44,6 +44,15 @@ document.addEventListener("DOMContentLoaded", function () {
         } catch (error) {
             resultDiv.innerHTML = `<strong style="color:red;">❌ Failed:</strong> ${error.message}`;
         }
-    });
+
+
     
+
+    });
+    const resetButton = document.getElementById("resetButton");
+    resetButton.addEventListener("click", () => {
+        serverUrlInput.value = "";
+        resultDiv.innerHTML = "";
+    });
+
 });
